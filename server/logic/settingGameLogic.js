@@ -1,5 +1,5 @@
 import { game } from './gameInit.js';
-import { deckGenerator } from './cardLogic.js'
+import { deckGenerator } from './cardLogic.js';
 
 export const settingGame = (roomId, firstPlayer, secondPlayer) => {
   game[roomId] = {};
@@ -13,10 +13,9 @@ export const settingGame = (roomId, firstPlayer, secondPlayer) => {
   game[roomId].position = {};
   game[roomId].currentPosition = 'attack';
   game[roomId].grabbing = false;
-  game[roomId].cardDeck = deckGenerator().slice(0, 15);
+  game[roomId].cardDeck = deckGenerator();
   return fillingUsersCards(true, roomId);
 };
-
 
 export const fillingUsersCards = (gameStart, roomId) => {
   for (let i = game[roomId].firstPlayerDeck.length; i < 6 && game[roomId].cardDeck.length; i++) {
@@ -37,7 +36,6 @@ const settingPlayersPositions = roomId => {
   return setTrumpCard(roomId);
 };
 
-
 const setTrumpCard = roomId => {
   game[roomId].trumpSuit = game[roomId].cardDeck[0];
 };
@@ -48,4 +46,3 @@ export const switchingPlayersPositions = roomId => {
     game[roomId].position.attack,
   ];
 };
-
