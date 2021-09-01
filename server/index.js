@@ -19,6 +19,8 @@ import { winningCheck } from './logic/winningCheck.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const PORT = process.env.PORT;
 const io = new Server(server, {
   cors: '*',
