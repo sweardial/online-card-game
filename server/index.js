@@ -5,6 +5,7 @@ const server = http.createServer(app);
 import { Server } from 'socket.io';
 import dotenv from 'dotenv';
 import path from 'path';
+import file from '../client/build/index.html'
 dotenv.config();
 
 import { createRoomWithFriend, createRoomWithRandom, joinFriend } from './logic/creatingRooms.js';
@@ -110,7 +111,7 @@ io.on('connection', socketHandler);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../', 'client', 'build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
+    res.sendFile(file);
   });
 }
 
