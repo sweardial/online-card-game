@@ -1,7 +1,11 @@
 import { game } from '../gameInit.js';
 
-import { possibleAttackingCard, possibleDefensiveCard} from '../cardlogic.js';
-import { removeCardFromUserDeck, fillingUsersCards } from '../cardLogic.js';
+import {
+  removeCardFromUserDeck,
+  fillingUsersCards,
+  possibleDefensiveCard,
+  possibleAttackingCard,
+} from '../cardLogic.js';
 import { switchingPlayersPositions } from '../settingGameLogic.js';
 import { grabCardsHandler } from './grabbingEvents.js';
 
