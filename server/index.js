@@ -103,9 +103,9 @@ const socketHandler = socket => {
 io.on('connection', socketHandler);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve('../client/build')));
+  app.use(express.static(path.join(__dirname, '../', 'client', 'build')));
   app.get('*', (req, res) => {
-    res.send('WORKING');
+    res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
   });
 }
 
