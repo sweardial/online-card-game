@@ -8,11 +8,11 @@ import path from 'path';
 dotenv.config();
 
 import { createRoomWithFriend, createRoomWithRandom, joinFriend } from './logic/creatingRooms.js';
-import { disconnectHandler } from './logic/playerActions/disconnection.js';
-import { grabbingEvent, grabCardsHandler } from './logic/playerActions/grabbingEvents.js';
+import { disconnectHandler } from './logic/playeractions/disconnection.js';
+import { grabbingEvent, grabCardsHandler } from './logic/playeractions/grabbingEvents.js';
 import { checkingTossingCards } from './logic/cardLogic.js';
-import { cardClickedHandler } from './logic/playerActions/cardClicked.js';
-import { doneAttackHandler } from './logic/playeractions/attackanddefenseevents.js';
+import { cardClickedHandler } from './logic/playeractions/cardClicked.js';
+import { doneAttackHandler } from './logic/playeractions/attackAndDefenseEvents.js';
 import { winningCheck } from './logic/winningCheck.js';
 
 const PORT = process.env.PORT;
