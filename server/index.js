@@ -5,7 +5,7 @@ const server = http.createServer(app);
 import { Server } from 'socket.io';
 import dotenv from 'dotenv';
 import path from 'path';
-import file from '../client/build/index.html'
+import file from 'C:\\Users\\dimon\\Desktop\\online-card-game\\client\\build\\index.html'
 dotenv.config();
 
 import { createRoomWithFriend, createRoomWithRandom, joinFriend } from './logic/creatingRooms.js';
