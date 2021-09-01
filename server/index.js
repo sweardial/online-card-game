@@ -19,7 +19,6 @@ import { winningCheck } from './logic/winningCheck.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = process.env.PORT;
 const io = new Server(server, {
   cors: '*',
@@ -107,10 +106,13 @@ const socketHandler = socket => {
 
 io.on('connection', socketHandler);
 
+
+
+
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve('../client/build/index.html')));
+  app.use(express.static('../client/build'));
   app.get('*', (req, res) => {
-    res.send('WORKING');
+    res.send(path.resolve(__dirname, '../', 'client', 'build', 'index.html'));
   });
 }
 
