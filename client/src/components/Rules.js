@@ -19,6 +19,11 @@ const Rules = () => {
         you start with any card, and then, if you have card with an equal value that you see any card on the battle table,
         you can toss your card in. As a defending player your main goal is to beat attacking cards. If you are using a card with
         a trump suit - you can beat any other cards regardless of its value (if it's not againt a trump suited card. In this case value pattern is the same)
+        If you don't have a card that beats the attacking card, then you grab all of the cards on the battle table, including some cards from attacking player
+        that he can toss in after you decided to grab.
+        
+        Value pattern: 
+        
         2 is smaller than 3
         3 is smaller than 4
         .
