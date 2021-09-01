@@ -5,7 +5,6 @@ const server = http.createServer(app);
 import { Server } from 'socket.io';
 import dotenv from 'dotenv';
 import path from 'path';
-import file from 'C:\\Users\\dimon\\Desktop\\online-card-game\\client\\build\\index.html'
 dotenv.config();
 
 import { createRoomWithFriend, createRoomWithRandom, joinFriend } from './logic/creatingRooms.js';
@@ -109,9 +108,9 @@ const socketHandler = socket => {
 io.on('connection', socketHandler);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../', 'client', 'build')));
+  app.use(express.static('../client/build'));
   app.get('*', (req, res) => {
-    res.sendFile(file);
+    res.sendFile('../client/build/index.html');
   });
 }
 
