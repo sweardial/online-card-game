@@ -105,11 +105,10 @@ io.on('connection', socketHandler);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('build'));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve('../client', 'build', 'index.html'));
+    res.sendFile(path.resolve('../client/build/index.html'));
   });
 }
 
-server.listen(PORT, (req, res) => {
-  console.log(req)
+server.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
