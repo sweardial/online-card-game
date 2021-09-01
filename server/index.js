@@ -8,11 +8,11 @@ import path from 'path';
 dotenv.config();
 
 import { createRoomWithFriend, createRoomWithRandom, joinFriend } from './logic/creatingRooms.js';
-import { disconnectHandler } from './logic/playeractions/disconnection.js';
-import { grabbingEvent, grabCardsHandler } from './logic/playeractions/grabbingEvents.js';
+import { disconnectHandler } from './logic/playerActions/disconnection.js';
+import { grabbingEvent, grabCardsHandler } from './logic/playerActions/grabbingEvents.js';
 import { checkingTossingCards } from './logic/cardLogic.js';
-import { cardClickedHandler } from './logic/playeractions/cardClicked.js';
-import { doneAttackHandler } from './logic/playeractions/attackAndDefenseEvents.js';
+import { cardClickedHandler } from './logic/playerActions/cardClicked.js';
+import { doneAttackHandler } from './logic/playerActions/attackAndDefenseEvents.js';
 import { winningCheck } from './logic/winningCheck.js';
 
 const PORT = process.env.PORT;
@@ -109,9 +109,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-server.listen(PORT, error => {
-  if (error) {
-    return console.log(`Listening error occured`, error);
-  }
+server.listen(PORT, (req, res) => {
+  console.log(req)
   console.log(`Server is running on ${PORT}`);
 });

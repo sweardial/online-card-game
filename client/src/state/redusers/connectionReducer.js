@@ -3,7 +3,7 @@ import { ENTER_WAITING_LOBBY, SET_OPPONENT_TYPE, INVALID_SESSION_KEY } from '../
 const initialState = {
   lobby: false,
   opponentType: '',
-  invalidSessionKey: false
+  invalidSessionKey: false,
 };
 
 const connectionReducer = (state = { ...initialState }, action) => {

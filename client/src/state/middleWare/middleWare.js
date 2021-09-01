@@ -94,7 +94,8 @@ const connectionMiddleWare = store => next => action => {
     }
   };
 
-  const socket = init();
+
+  const socket = init()
 
   switch (action.type) {
     case NEW_CONNECTION:

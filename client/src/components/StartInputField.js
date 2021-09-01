@@ -13,6 +13,7 @@ import Lobby from './Lobby';
 const StartInputField = () => {
   const roomId = useSelector(state => state.id.roomId);
   const lobby = useSelector(state => state.connection.lobby);
+  const connectionError = useSelector(state => state.connection.connectionError)
 
   const [modal_create, setModal_create] = useState(false);
   const [modal_join, setModal_join] = useState(false);
@@ -21,8 +22,6 @@ const StartInputField = () => {
   const create_toggle = () => setModal_create(!modal_create);
   const join_toggle = () => setModal_join(!modal_join);
   const rules_toggle = () => setModal_rules(!modal_rules);
-
-
   return (
     <div>
       {!lobby ? (
@@ -62,6 +61,7 @@ const StartInputField = () => {
         <Lobby></Lobby>
       )}
       {roomId && <Redirect to={roomId} />}
+      {connectionError && alert('Connection error occured')}
     </div>
   );
 };
