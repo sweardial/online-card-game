@@ -1,0 +1,8 @@
+.userDeck {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0);
+  margin-top: 5rem;
+}

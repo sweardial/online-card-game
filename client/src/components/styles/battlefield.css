@@ -1,0 +1,25 @@
+.battlefield {
+  width: 30rem;
+  background-color: rgba(235, 217, 217, 0);
+  height: 12rem;
+  margin-top: 10px;
+}
+.battlefield .attackingPosition {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin: 1rem 2rem 0 5rem;
+}
+
+.battlefield .defendingPosition {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin: -6rem 2rem 0 5rem;
+}

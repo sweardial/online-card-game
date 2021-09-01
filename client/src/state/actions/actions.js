@@ -1,0 +1,51 @@
+export const SET_DECK = 'SET_DECK';
+export const FILL_MY_DECK = 'FILL_MY_DECK';
+export const FILL_OPPONENT_DECK = 'FILL_OPPONENT_DECK';
+export const SET_TRUMP_CARD = 'SET_TRUMP_CARD';
+export const OPPONENT_DISCONNECTION = 'OPPONENT_DISCONNECTION';
+export const SUCCESSFUL_DEFENSE = 'SUCCESSFUL_DEFENSE';
+export const DELETE_USER_CARD = 'DELETE_USER_CARD';
+export const SET_ATTACKING_CARDS = 'SET_ATTACKING_CARDS';
+export const SET_DEFENSIVE_CARDS = 'SET_DEFENSIVE_CARDS';
+export const SET_GAME_ID = 'SET_GAME_ID';
+export const NEW_CONNECTION = 'NEW_CONNECTION';
+export const CARD_CLICKED = 'CARD_CLICKED';
+export const SET_ATTACKING_USER = 'SET_ATTACKING_USER';
+export const SET_DEFENSIVE_USER = 'SET_DEFENSIVE_USER';
+export const SET_USER_ID = 'SET_USER_ID';
+export const ENTER_WAITING_LOBBY = 'ENTER_WAITING_LOBBY';
+export const SET_OPPONENT_TYPE = 'SET_OPPONENT_TYPE';
+export const SET_SESSION_KEY = 'SET_SESSION_KEY';
+export const DONE_ATTACK = 'DONE_ATTACK';
+export const GRAB_CARDS = 'GRAB_CARDS';
+export const DELETE_OPPONENT_CARD = 'DELETE_OPPONENT_CARD';
+export const INVALID_SESSION_KEY = 'INVALID_SESSION_KEY';
+export const GRABBING_EVENT = 'GRABBING_EVENT';
+export const GAME_OVER = 'GAME_OVER';
+
+export const setSessionKey = key => ({ type: SET_SESSION_KEY, payload: key });
+export const settingOpponentType = type => ({ type: SET_OPPONENT_TYPE, payload: type });
+export const enterWaitingLobby = bool => ({ type: ENTER_WAITING_LOBBY, payload: bool });
+export const setDeck = cards => ({ type: SET_DECK, payload: cards });
+export const fillMyDeck = cards => ({ type: FILL_MY_DECK, payload: cards });
+export const fillOpponentDeck = cards => ({ type: FILL_OPPONENT_DECK, payload: cards });
+export const setTrumpCard = card => ({ type: SET_TRUMP_CARD, payload: card });
+export const setSuccessfulDefense = data => ({ type: SUCCESSFUL_DEFENSE, payload: data });
+export const deleteOneCard = card => ({ type: DELETE_USER_CARD, payload: card });
+export const setAttackingCards = cards => ({ type: SET_ATTACKING_CARDS, payload: cards });
+export const setDefensiveCards = cards => ({ type: SET_DEFENSIVE_CARDS, payload: cards });
+export const setGameId = id => ({ type: SET_GAME_ID, payload: id });
+export const userConnection = data => ({ type: NEW_CONNECTION, payload: data });
+export const cardClicked = (card, roomId, grabbing, uid) => ({
+  type: CARD_CLICKED,
+  payload: { card, roomId, grabbing, uid },
+});
+export const setUserId = id => ({ type: SET_USER_ID, payload: id });
+export const setAttackingUser = id => ({ type: SET_ATTACKING_USER, payload: id });
+export const setDefensingUser = id => ({ type: SET_DEFENSIVE_USER, payload: id });
+export const doneAttack = (roomId, uid) => ({ type: DONE_ATTACK, payload: { roomId, uid } });
+export const grabCards = (roomId, uid) => ({ type: GRAB_CARDS, payload: { roomId, uid } });
+export const deleteOpponentCard = () => ({ type: DELETE_OPPONENT_CARD });
+export const invalidSessionKey = boolean => ({ type: INVALID_SESSION_KEY, payload: boolean });
+export const grabbingEvent = boolean => ({ type: GRABBING_EVENT, payload: boolean });
+export const gameOver = boolean => ({ type: GAME_OVER, payload: boolean });
