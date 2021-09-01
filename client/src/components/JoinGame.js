@@ -5,7 +5,6 @@ import { userConnection, invalidSessionKey } from '../state/actions/actions';
 
 const JoinGame = () => {
   const invalidKey = useSelector(state => state.connection.invalidSessionKey);
-  console.log(invalidKey);
   const [username, setUsername] = useState('');
   const [sessionKey, setSessionKey] = useState('');
   const [submitted, setSubmitted] = useState(false);

@@ -8,7 +8,6 @@ const CardComponent = ({ props, disabled, deck }) => {
   const roomId = useSelector(state => state.id.roomId);
   const uid = useSelector(state => state.id.uid)
   const grabbing = useSelector(state => state.cards.grabbing)
-  console.log(grabbing)
   
   const [mouseOver, setMouseOver] = useState(false);
 
