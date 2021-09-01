@@ -4,7 +4,6 @@ import { settingGame } from "./settingGameLogic.js";
 export const settingRooms = (type, friendOne = {}, friendTwo = {}) => {
   const roomId = '_' + Math.random().toString(36).substr(2, 9);
   rooms.push(roomId)
-  console.log("IMHERE")
   if (type === 'random') {
     for (let user in randomUsers) {
       if (!randomUsers[user].roomId) {

@@ -33,7 +33,7 @@ const socketHandler = socket => {
         const [type, roomId, game] = createRoomWithRandom(socket, data);
         io.to(roomId).emit(type, roomId, game);
       } catch (e) {
-        console.log(e, 'waiting for another random player');
+        console.log('waiting for another random player');
       }
     } else if (data.opponentType === 'friend') {
       try {
@@ -63,7 +63,7 @@ const socketHandler = socket => {
         return;
       }
     } catch (e) {
-      console.log(e, 'Wrong card or not user turn');
+      console.log('Wrong card or not user turn');
     }
   });
 
