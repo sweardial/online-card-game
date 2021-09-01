@@ -13,7 +13,6 @@ import Lobby from './Lobby';
 const StartInputField = () => {
   const roomId = useSelector(state => state.id.roomId);
   const lobby = useSelector(state => state.connection.lobby);
-  const connectionError = useSelector(state => state.connection.connectionError)
 
   const [modal_create, setModal_create] = useState(false);
   const [modal_join, setModal_join] = useState(false);
@@ -61,7 +60,6 @@ const StartInputField = () => {
         <Lobby></Lobby>
       )}
       {roomId && <Redirect to={roomId} />}
-      {connectionError && alert('Connection error occured')}
     </div>
   );
 };

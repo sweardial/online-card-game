@@ -4,8 +4,6 @@ import CardComponent from './Card';
 import './styles/battlefield.css';
 
 const Battlefield = () => {
-  // const ad = useSelector(state => state.ad)
-  // const dd = useSelector(state => state.dd)
   const attackingCards = useSelector(state => state.cards.attackingCards)
   const defensiveCards = useSelector(state => state.cards.defensiveCards)
   return (
