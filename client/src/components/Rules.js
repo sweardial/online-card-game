@@ -15,12 +15,12 @@ const Rules = () => {
         <p>
         In the deck on the right side you see a card with a trump suit and the rest of the cards that are used for filling 
         your hand back up to 6. </p>
-        <br></br>
+
         <p>
         When it's your turn to attack,
         you start with any card, and then, if you have card with an equal value that you see any card on the battle table,
         you can toss your card in. As a defending player your main goal is to beat attacking cards.</p>
-        <br></br>
+
         <p>
         If you are using a card with
         a trump suit - you can beat any other cards regardless of its value (if it's not againt a trump suited card. 
@@ -28,8 +28,7 @@ const Rules = () => {
         If you don't have a card that beats the attacking card, then you grab all of the cards on the battle table, 
         including some cards from attacking player
         that he can toss in after you decided to grab.</p>
-        <br></br>
-        Value pattern: 
+        <b>Value pattern</b>
         <br></br>
         2 is smaller than 3<br></br>
         3 is smaller than 4<br></br>
