@@ -42,7 +42,7 @@ const Rules = () => {
         King is smaller that Ace<br></br>
         <p>
         <b>Game is over</b> when the deck is empty one of the users don't have any cards left. 
-        Empty head player is a <b>winner</b>.
+        Empty hand player is a <b>winner</b>.
         If both of players don't have cards - it's a <b>Tie</b>.
         </p>
     </div>
