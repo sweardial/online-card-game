@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from 'reactstrap';
 import { grabCards } from '../state/actions/actions';
 import './styles/mainfield.css'
 
@@ -16,7 +15,7 @@ const DefensiveUserAction = () => {
     <div className='actions'>
       {attackingCards.length > defensiveCards.length && !grabbing ? (
         <button
-          style={{ marginTop: '5rem', width: 'fit-content', backgroundColor:'yellow'}}
+          className='action-btn'
           onClick={() => dispatch(grabCards(roomId, uid))}>
           Grab
         </button>
