@@ -15,7 +15,7 @@ const DefensiveUserAction = () => {
     <div className='actions'>
       {attackingCards.length > defensiveCards.length && !grabbing ? (
         <button
-          className='action-btn'
+          className='btn--action'
           onClick={() => dispatch(grabCards(roomId, uid))}>
           Grab
         </button>

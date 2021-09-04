@@ -16,7 +16,7 @@ const AttackingUserAction = () => {
     <div className='actions'>
       {grabbing ||
       (attackingCards.length !== 0 && attackingCards.length === defensiveCards.length) ? (
-        <button onClick={() => dispatch(doneAttack(roomId, uid))} className='action-btn'>
+        <button onClick={() => dispatch(doneAttack(roomId, uid))} className='btn--action'>
           Done
         </button>
       ) : (
