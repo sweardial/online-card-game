@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'reactstrap';
 import { doneAttack } from '../state/actions/actions';
-import './styles/mainfield.css'
+import './styles/mainfield.css';
 
 const AttackingUserAction = () => {
   const grabbing = useSelector(state => state.cards.grabbing);
@@ -10,20 +10,17 @@ const AttackingUserAction = () => {
   const defensiveCards = useSelector(state => state.cards.defensiveCards);
   const roomId = useSelector(state => state.id.roomId);
   const uid = useSelector(state => state.id.uid);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <div className='actions'>
       {grabbing ||
       (attackingCards.length !== 0 && attackingCards.length === defensiveCards.length) ? (
-        <Button
-          outline
+        <button
           onClick={() => dispatch(doneAttack(roomId, uid))}
-          style={{ marginTop: '5rem', width: 'fit-content' }}
-          color='warning'
-          size='sm'>
+          style={{ marginTop: '5rem', width: 'fit-content', backgroundColor: 'yellow' }}>
           Done
-        </Button>
+        </button>
       ) : (
         <div style={{ marginTop: '6rem' }}></div>
       )}

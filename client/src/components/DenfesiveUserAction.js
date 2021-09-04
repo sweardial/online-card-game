@@ -15,14 +15,11 @@ const DefensiveUserAction = () => {
   return (
     <div className='actions'>
       {attackingCards.length > defensiveCards.length && !grabbing ? (
-        <Button
-          outline
-          style={{ marginTop: '5rem', width: 'fit-content' }}
-          color='warning'
-          size='sm'
+        <button
+          style={{ marginTop: '5rem', width: 'fit-content', backgroundColor:'yellow'}}
           onClick={() => dispatch(grabCards(roomId, uid))}>
           Grab
-        </Button>
+        </button>
       ) : (
         <div style={{ marginTop: '6rem' }}></div>
       )}
